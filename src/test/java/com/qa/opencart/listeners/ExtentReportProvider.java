@@ -1,8 +1,5 @@
 package com.qa.opencart.listeners;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -21,11 +18,11 @@ public class ExtentReportProvider implements ITestListener {
 	@Override
 	public void onStart(ITestContext testcontext) {
 
-		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-		String reportName = "TestReport_" + timestamp + ".html";
+//		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+//		String reportName = "TestReport_" + timestamp + ".html";
 
 		ExtentSparkReporter reporter = new ExtentSparkReporter(
-				System.getProperty("user.dir") + "/reports/" + reportName);
+				System.getProperty("user.dir") + "/reports/" + "ExtentReport.html");
 
 		reporter.config().setDocumentTitle("Automation testing");
 		reporter.config().setReportName("Automation Report");

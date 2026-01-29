@@ -3,13 +3,10 @@
 <suite thread-count="2" parallel="tests" name="Suite">
 <!-- parallel testing with the same browser at a time launch as per test -->
 <listeners>
-			<listener class-name="com.qa.opencart.listeners.ExtentReportProvider"/>
-
-		</listeners>
+		<listener class-name="com.qa.opencart.listeners.ExtentReportProvider"/>
+</listeners>
 
   <test thread-count="2" parallel="tests" name="HomePageTest">
-  
-  
   
     <classes>
       <class name="com.qa.opencart.tests.HomePageTest"/>
