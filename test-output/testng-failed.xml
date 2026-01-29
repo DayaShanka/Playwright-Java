@@ -6,7 +6,9 @@
       <class name="com.qa.opencart.tests.HomePageTest">
         <methods>
           <include name="setUP"/>
-          <include name="verifySearchField" invocation-numbers="1"/>
+          <include name="verifyHomePageTitle"/>
+          <include name="verifyHomePageURL"/>
+          <include name="verifySearchField"/>
         </methods>
       </class> <!-- com.qa.opencart.tests.HomePageTest -->
     </classes>

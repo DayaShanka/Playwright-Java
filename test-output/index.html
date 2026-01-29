@@ -133,17 +133,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.opencart.tests.HomePageTest" class="method navigator-link" hash-for-method="verifySearchField(Macbook)">verifySearchField(Macbook)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.qa.opencart.tests.HomePageTest" class="method navigator-link" hash-for-method="verifySearchField(Samsung)">verifySearchField(Samsung)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.qa.opencart.tests.HomePageTest" class="method navigator-link" hash-for-method="verifySearchField(iMac)">verifySearchField(iMac)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.opencart.tests.HomePageTest" class="method navigator-link" hash-for-method="verifySearchField(Macbook)">verifySearchField(Macbook)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -216,6 +216,14 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="verifySearchField(Macbook)">
+                  </a> <!-- verifySearchField(Macbook) -->
+                  <span class="method-name">verifySearchField</span>
+                  <span class="parameters">(Macbook)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verifySearchField(Samsung)">
                   </a> <!-- verifySearchField(Samsung) -->
                   <span class="method-name">verifySearchField</span>
@@ -230,14 +238,6 @@
                   <span class="parameters">(iMac)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifySearchField(Macbook)">
-                  </a> <!-- verifySearchField(Macbook) -->
-                  <span class="method-name">verifySearchField</span>
-                  <span class="parameters">(Macbook)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
@@ -250,6 +250,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.qa.opencart.listeners.ExtentReportProvider&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;HomePageTest&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.opencart.tests.HomePageTest&quot;/&gt;
@@ -302,33 +305,33 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'navigateLoginTest')
+data.setCell(0, 1, 'doLogin')
 data.setCell(0, 2, 'com.qa.opencart.tests.LoginPageTest')
-data.setCell(0, 3, 750);
+data.setCell(0, 3, 579);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'doLogin')
-data.setCell(1, 2, 'com.qa.opencart.tests.LoginPageTest')
-data.setCell(1, 3, 649);
+data.setCell(1, 1, 'verifySearchField')
+data.setCell(1, 2, 'com.qa.opencart.tests.HomePageTest')
+data.setCell(1, 3, 537);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifySearchField')
-data.setCell(2, 2, 'com.qa.opencart.tests.HomePageTest')
-data.setCell(2, 3, 562);
+data.setCell(2, 1, 'navigateLoginTest')
+data.setCell(2, 2, 'com.qa.opencart.tests.LoginPageTest')
+data.setCell(2, 3, 464);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'verifySearchField')
 data.setCell(3, 2, 'com.qa.opencart.tests.HomePageTest')
-data.setCell(3, 3, 473);
+data.setCell(3, 3, 428);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifySearchField')
 data.setCell(4, 2, 'com.qa.opencart.tests.HomePageTest')
-data.setCell(4, 3, 471);
+data.setCell(4, 3, 380);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'verifyLoginPageTitle')
 data.setCell(5, 2, 'com.qa.opencart.tests.LoginPageTest')
-data.setCell(5, 3, 26);
+data.setCell(5, 3, 37);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'verifyHomePageTitle')
 data.setCell(6, 2, 'com.qa.opencart.tests.HomePageTest')
-data.setCell(6, 3, 17);
+data.setCell(6, 3, 33);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'verifyLoginPageURL')
 data.setCell(7, 2, 'com.qa.opencart.tests.LoginPageTest')
@@ -341,7 +344,7 @@ window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -384,51 +387,57 @@ return data;
               <div class="chronological-class-name">com.qa.opencart.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyHomePageTitle</span>
-                <span class="method-start">13678 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyHomePageURL</span>
-                <span class="method-start">13700 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifySearchField(Macbook)</span>
-                <span class="method-start">13714 ms</span>
+                <span class="method-start">12704 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.opencart.tests.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">navigateLoginTest</span>
-                <span class="method-start">13848 ms</span>
+                <span class="method-start">12704 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.opencart.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">verifySearchField(iMac)</span>
-                <span class="method-start">14278 ms</span>
+                <span class="method-name">verifyHomePageURL</span>
+                <span class="method-start">12745 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySearchField(Macbook)</span>
+                <span class="method-start">12754 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.opencart.tests.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyLoginPageTitle</span>
-                <span class="method-start">14601 ms</span>
+                <span class="method-start">13171 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.HomePageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifySearchField(iMac)</span>
+                <span class="method-start">13185 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.tests.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyLoginPageURL</span>
-                <span class="method-start">14630 ms</span>
+                <span class="method-start">13213 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">doLogin</span>
-                <span class="method-start">14637 ms</span>
+                <span class="method-start">13218 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.opencart.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifySearchField(Samsung)</span>
-                <span class="method-start">14751 ms</span>
+                <span class="method-start">13724 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.constant.AppConstants;
+import com.qa.opencart.listeners.ExtentLogger;
 
 public class HomePageTest extends BaseTest {
 
@@ -14,6 +15,7 @@ public class HomePageTest extends BaseTest {
 
 		String actualTitle = homePage.getTitle();
 		Assert.assertEquals(actualTitle, AppConstants.HOME_PAGE_TITLE);
+		ExtentLogger.pass("Title of the homePage:- " + actualTitle);
 
 	}
 
